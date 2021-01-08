@@ -1,0 +1,47 @@
+body {
+background-color: #bce6eb;
+margin-top: 26px;
+margin-left:118px;
+margin-right:127px;
+padding-bottom: 0px;
+margin-bottom: 161px;
+border-top-width: 10px;
+border-top-style: solid;
+border-right-width: 10px;
+border-right-style: solid;
+border-bottom-width: 10px;
+border-bottom-style: solid;
+border-left-width: 10px;
+border-left-style: solid;
+border-color: #fca3cc;
+}
+.fa-icicles {
+    font-size: 100px;}
+.fa-cloud-showers-heavy {
+    font-size:25px;}
+.main{            width: 1243px;
+
+               background-image: url("clouds.jpeg"); }
+h1  {
+    font-family: 'Abril Fatface', cursive;
+    Font-size:50px; 
+    top:0;}
+h2,h3{
+    font-family: 'Abril Fatface', cursive;}   
+button{
+        font-family: 'Abril Fatface', cursive;} 
+   
+        p.date {position: absolute;
+            font-family: 'Abril Fatface', cursive;
+    Font-size:50px}
+
+    .col-2 {font-family: 'Abril Fatface', cursive;}
+
+p.date,i.fas.fa-icicles {
+text-align: right;
+padding-top:0;
+}
+p.date{top:-9px;
+    margin-left:225px;
+}
+
