@@ -95,7 +95,7 @@ let minute = now.getUTCMinutes();
 if (minute < 10) {
   minute = `0${minute}`;
 }
-let date = document.querySelector("h2.date");
+let date = document.querySelector(".date");
 date.innerHTML = `${day} ${month} ${dates}  ${hour}:${minute}`;
 
 let searchCity = document.querySelector("#search-city");
