@@ -1,9 +1,9 @@
 body {
 background-color: #bce6eb;
-margin-top: 26px;
-margin-left:118px;
-margin-right:127px;
-margin-bottom: 161px;
+margin-top: 2px;
+margin-left:245px;
+margin-right:315px;
+margin-bottom: 2px;
 border-top-width: 10px;
 border-top-style: solid;
 border-right-width: 10px;
@@ -15,20 +15,25 @@ border-left-style: solid;
 border-color: #fca3cc;
 padding-bottom: 0px;
 }
+form {
+    text-align: center;
+}
 .fa-icicles {
-    font-size: 100px;}
+    font-size: 50px;}
 .fa-cloud-showers-heavy {
     font-size:25px;}
-.main{            width: 1084px;
-    height:640px;
+.main{            width: 769px;
+    height:658px;
                background-image: url("clouds.jpeg"); }
 h1  {
+    text-align: center;
     font-family: 'Abril Fatface', cursive;
     Font-size:50px; 
-    top:0;}
+}
+    h2{text-align:center;}
 h2,h3{
     font-family: 'Abril Fatface', cursive;}   
-button{
+button{ 
         font-family: 'Abril Fatface', cursive;} 
    
         p.date {position: absolute;

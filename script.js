@@ -17,6 +17,12 @@ function showNewCityWeather(response) {
   document.querySelector(".description").innerHTML =
     response.data.weather[0].main;
 }
+function findDefaultCity(city) {
+  let units="metric"
+  let apiKey = "b34ef3b4fee7b2098cbfab18c5c5867d";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${units}&appid=${apiKey}`;
+  axios.get(apiUrl).then(showNewCityWeather);
+}
 function getCurrentLocationUrl(position) {
   navigator.geolocation.getCurrentPosition(getCurrentLocationWeather);
 }
@@ -111,3 +117,5 @@ farenheitButton.addEventListener("click", showFarenheit);
 
 let currentLocationButton = document.querySelector("#current-location");
 currentLocationButton.addEventListener("click", getCurrentLocationUrl);
+
+findDefaultCity("glasgow");
