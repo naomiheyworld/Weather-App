@@ -18,8 +18,12 @@ padding-bottom: 0px;
 form {
     text-align: center;
 }
+.description{
+    margin-bottom:0;
+}
 .fa-icicles {
-    font-size: 50px;}
+    font-size: 50px;
+margin-bottom: 0;}
 .fa-cloud-showers-heavy {
     font-size:25px;}
 .main{            width: 769px;
