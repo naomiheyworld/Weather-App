@@ -1,8 +1,11 @@
+.main-wrapper {
+  margin: 0 auto;
+}
 body {
 background-color: #bce6eb;
 margin-top: 2px;
 margin-left:245px;
-margin-right:315px;
+margin-right:332px;
 margin-bottom: 2px;
 border-top-width: 10px;
 border-top-style: solid;
@@ -22,37 +25,54 @@ form {
     margin-bottom:0;
 }
 .weather-icon {
-    width: 50px;
-margin-bottom: 0;}
+   width: 77px;
+margin-bottom: -13px;
+height: 74px;
+margin-left: -13px;
+margin-top: -39px;
+}
 .fa-cloud-showers-heavy {
     font-size:25px;}
 .main{            width: 769px;
-    height:658px;
+    height:619px;
                background-image: url("clouds.jpeg"); }
-h1  {
-    text-align: center;
-    font-family: 'Abril Fatface', cursive;
-    Font-size:50px; 
+h1 {
+  padding-left: 50px;
+  text-align: center;
+  font-family: "Abril Fatface", cursive;
+  font-size: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
-    h2{text-align:center;}
-h2,h3{
+h2
+ {
+    text-align: center;
+  font-family: "Abril Fatface", cursive;
+}
+h3{font-family: "Abril Fatface", cursive;}
+button {
+  text-align: center;
+  font-family: "Abril Fatface", cursive;
+}
+    form{text-align: center;}
+
+h3{
     font-family: 'Abril Fatface', cursive;}   
 button{ 
         font-family: 'Abril Fatface', cursive;} 
-   
-        p.date {position: absolute;
-            font-family: 'Abril Fatface', cursive;
-    Font-size:50px}
 
     .col-2 {font-family: 'Abril Fatface', cursive;}
 
-p.date,i.fas.fa-icicles {
-text-align: right;
-padding-top:0;
-}
-p.date{top:-9px;
-    margin-left:225px;
-}
+
 small{display: inline;
 margin: 0 auto;}
+
+ul {
+  margin-top:18px;
+}
+ul li {
+  font-family: "Abril Fatface", cursive;
+  font-size: 20px;
+  list-style-type: none;
+}
 

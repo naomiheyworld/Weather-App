@@ -20,7 +20,15 @@ function showNewCityWeather(response) {
     let weatherIconElement= document.querySelector("#weather-icon")
     weatherIconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
     weatherIconElement.setAttribute("alt", response.data.weather[0].main)
+    let humidity = document.querySelector(".humidity");
+  let windSpeed = document.querySelector(".wind-speed");
+  let minTemp = document.querySelector(".min-temp");
+  console.log(response.data.main.humidity)
+  humidity.innerHTML = response.data.main.humidity;
+  windSpeed.innerHTML = Math.round(response.data.wind.speed);
+  minTemp.innerHTML = Math.round(response.data.main.temp_min);
 }
+
 function findDefaultCity(city) {
   let units="metric"
   let apiKey = "b34ef3b4fee7b2098cbfab18c5c5867d";
