@@ -56,7 +56,10 @@ function displayCurrentLocationWeather(response) {
   );
   document.querySelector(".description").innerHTML =
     response.data.weather[0].main;
-}
+let weatherIconElement= document.querySelector("#weather-icon")
+    weatherIconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
+    weatherIconElement.setAttribute("alt", response.data.weather[0].main)
+  }
 
 function showCelcius(event) {
   event.preventDefault();
