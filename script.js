@@ -6,6 +6,8 @@ function changeCity(event) {
   let apiKey = "b34ef3b4fee7b2098cbfab18c5c5867d";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchCityInput.value}&units=${units}&appid=${apiKey}`;
   axios.get(apiUrl).then(showNewCityWeather);
+
+  
 }
 function showNewCityWeather(response) {
   document.querySelector(
@@ -14,6 +16,7 @@ function showNewCityWeather(response) {
   document.querySelector(".temp").innerHTML = Math.round(
     response.data.main.temp
   );
+  document.querySelector(".symbol").innerHTML=`°C`;
   document.querySelector(".description").innerHTML =
     response.data.weather[0].main;
     celciusTemperature=response.data.main.temp;
@@ -55,6 +58,7 @@ function displayCurrentLocationWeather(response) {
   );
   document.querySelector(".description").innerHTML =
     response.data.weather[0].main;
+    document.querySelector(".symbol").innerHTML=`°C`
 let weatherIconElement= document.querySelector("#weather-icon")
     weatherIconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
     weatherIconElement.setAttribute("alt", response.data.weather[0].main)
