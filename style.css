@@ -1,9 +1,10 @@
 .main-wrapper {
   margin: 0 auto;
+
 }
 body {
 background-color: #bce6eb;
-margin-top: 2px;
+margin-top: 11px;
 margin-left:245px;
 margin-right:332px;
 margin-bottom: 2px;
@@ -34,7 +35,7 @@ margin-top: -39px;
 .fa-cloud-showers-heavy {
     font-size:25px;}
 .main{            width: 769px;
-    height:619px;
+    height:600px;
                background-image: url("clouds.jpeg"); }
 h1 {
   padding-left: 50px;

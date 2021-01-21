@@ -16,14 +16,13 @@ function showNewCityWeather(response) {
   );
   document.querySelector(".description").innerHTML =
     response.data.weather[0].main;
-    
+    celciusTemperature=response.data.main.temp;
     let weatherIconElement= document.querySelector("#weather-icon")
     weatherIconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
     weatherIconElement.setAttribute("alt", response.data.weather[0].main)
     let humidity = document.querySelector(".humidity");
   let windSpeed = document.querySelector(".wind-speed");
   let minTemp = document.querySelector(".min-temp");
-  console.log(response.data.main.humidity)
   humidity.innerHTML = response.data.main.humidity;
   windSpeed.innerHTML = Math.round(response.data.wind.speed);
   minTemp.innerHTML = Math.round(response.data.main.temp_min);
@@ -65,17 +64,20 @@ function showCelcius(event) {
   event.preventDefault();
   let celciusButton = document.querySelector("#celcius-button");
   let tempDisplay = document.querySelector(".temp");
-
-  let celciusTemp = Math.round(((tempDisplay.innerHTML - 32) * 5) / 9);
+  let celciusTemp = Math.round(celciusTemperature);
   tempDisplay.innerHTML = `${celciusTemp}`;
+  let symbolElement= document.querySelector(".symbol")
+  symbolElement.innerHTML= "°C";
 }
 
 function showFarenheit(event) {
   event.preventDefault();
   let farenheitButton = document.querySelector("#farenheit-button");
   let tempDisplay = document.querySelector(".temp");
-  let farenheitTemp = Math.round((tempDisplay.innerHTML * 9) / 5 + 32);
+  let farenheitTemp = Math.round((celciusTemperature * 9) / 5 + 32);
   tempDisplay.innerHTML = `${farenheitTemp}`;
+  let symbolElement= document.querySelector(".symbol")
+  symbolElement.innerHTML= "°F";
 }
 
 let now = new Date();
@@ -133,4 +135,5 @@ farenheitButton.addEventListener("click", showFarenheit);
 let currentLocationButton = document.querySelector("#current-location");
 currentLocationButton.addEventListener("click", getCurrentLocationUrl);
 
+let celciusTemperature= null
 findDefaultCity("glasgow");
