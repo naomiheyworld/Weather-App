@@ -16,7 +16,7 @@ function showNewCityWeather(response) {
   document.querySelector(".temp").innerHTML = Math.round(
     response.data.main.temp
   );
-  document.querySelector(".symbol").innerHTML=`°C`;
+  document.querySelector(".symbol").innerHTML=`°C`
   document.querySelector(".description").innerHTML =
     response.data.weather[0].main;
     celciusTemperature=response.data.main.temp;
