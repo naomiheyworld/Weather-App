@@ -36,7 +36,32 @@ function findDefaultCity(city) {
   let apiKey = "b34ef3b4fee7b2098cbfab18c5c5867d";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${units}&appid=${apiKey}`;
   axios.get(apiUrl).then(showNewCityWeather);
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=${units}&appid=${apiKey}`;
+  axios.get(apiUrl).then(showForecast);
 }
+function showForecast(response) {
+  console.log(response.data.list);
+  let forecast = null;
+  let forecastElement = document.querySelector("#forecast-cols");
+  forecastElement.innerHTML = null;
+  for (let index = 0; index < 4; index++) {
+    forecast = response.data.list[index];
+    let iconElement = forecast.weather[0].icon;
+    forecastElement.innerHTML += `
+    <div class="row" id="forecast-cols">
+    <div class="col-3">
+    <div class=time>
+    <p>time</p>
+                                    <img class="forecast-icon" src="http://openweathermap.org/img/wn/${iconElement}@2x.png"></img>
+                                    <p>${forecast.weather[0].description}</p>
+                                    <p><strong>${Math.round(
+                                      forecast.main.temp_max
+                                    )}</strong></p>
+      <p>${Math.round(forecast.main.temp_min)}</p>
+                                </div>`;
+  }
+}
+
 function getCurrentLocationUrl(position) {
   navigator.geolocation.getCurrentPosition(getCurrentLocationWeather);
 }

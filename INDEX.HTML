@@ -18,9 +18,10 @@
 
 
 <body>
-    <div class=main-wrapper>
-        <div class="main">
-            <div class="container">
+<div class="container">
+   <div class="main wrapper">
+  
+        <div class="row">
                 
     
     
@@ -36,7 +37,6 @@
                                 Current Location
                         </form>
                         </button>
-                        <div class="row">
                         <div class="col-6">
                             <h3 class="description">Weather conditions</h3>
                                 <br />
@@ -53,29 +53,25 @@
                             </ul>
                         </div>
     
-                        <div class="col">
-                            <h3>Five Day Forecast</h3>
-                            <div class="row">
-                                <div class="col-2">
-                                    <p>Monday</p>
-                                    <br />
-                                    <i class="fas fa-cloud-showers-heavy"></i>
-                                    <p>Sleet Rain</p>
-                                    <p><strong>3</strong></p>
-                                    <p>1</p>
-                                </div>
-                                
-                                
-                                
-                               
+                        <h3>Today's Forecast</h3>
+                        </br>
+                        <div class="row" id="forecast-cols">
+                        <div class="col-3">
+                            <div class=time>
+                                <p>time</p>
+                                <br />
+                                <img class="forecast-icon" src=https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png></img>
+                                <p>Sleet Rain</p>
+                                <p><strong>30</strong></p>
+                                <p>1</p>
                             </div>
-                        </div>
                         
+                        </div>
                 </div>
             <small><a href="https://github.com/naomiheyworld/Weather-App"> Open source code</a> by Naomi
                 Stubbs-Gorman</small>
             </div>
-
+        </div>
 <script src="script.js"></script>
 
 </body>
