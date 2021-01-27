@@ -1,12 +1,10 @@
-.wrapper {
-  margin: 0 auto;
 
-}
+
 body {
 background-color: #bce6eb;
 margin-top: 11px;
 margin-left:245px;
-margin-right:332px;
+margin-right:328px;
 margin-bottom: 2px;
 border-top-width: 10px;
 border-top-style: solid;
@@ -22,6 +20,10 @@ padding-bottom: 0px;
 form {
     text-align: center;
 }
+.row{
+    margin-left: 15px;       
+    margin-right: -14px;
+}
 .description{
     margin-bottom:0;
 }
@@ -32,11 +34,25 @@ height: 74px;
 margin-left: -13px;
 margin-top: -39px;
 }
-.fa-cloud-showers-heavy {
-    font-size:25px;}
-.main{            width: 769px;
+
+.main{            width: 756px;
     height:600px;
-               background-image: url("clouds.jpeg"); }
+    margin-left: -15px;
+    background-image: url("clouds.jpeg");}
+               
+    
+    .col-3{width: 214px;
+                   margin-left: -19px;
+margin-top: 34px;
+width: 726px;
+               }
+               .forecast-header{margin-left:232px;
+            margin-top:8px;    
+        margin-bottom:-8px;}
+               .forecast-time {   
+                margin-bottom:-37px;}
+               .forecast-icon {margin-bottom: -25px;}
+
 h1 {
   padding-left: 50px;
   text-align: center;
@@ -66,7 +82,8 @@ button{
 
 
 small{display: inline;
-margin: 0 auto;}
+margin: 0 auto;
+margin-top: 19px;}
 
 ul {
   margin-top:18px;

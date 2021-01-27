@@ -7,6 +7,8 @@ function changeCity(event) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchCityInput.value}&units=${units}&appid=${apiKey}`;
   axios.get(apiUrl).then(showNewCityWeather);
 
+  apiUrl=`https://api.openweathermap.org/data/2.5/forecast?q=${searchCityInput.value}&units=${units}&appid=${apiKey}`;
+axios.get(apiUrl).then(showForecast);
   
 }
 function showNewCityWeather(response) {
@@ -48,11 +50,11 @@ function showForecast(response) {
     forecast = response.data.list[index];
     let iconElement = forecast.weather[0].icon;
     forecastElement.innerHTML += `
-    <div class="row" id="forecast-cols">
-    <div class="col-3">
-    <div class=time>
+    
+    <div class="col-3 text-center">
+    <div class="forecast-time">
     <p>time</p>
-                                    <img class="forecast-icon" src="http://openweathermap.org/img/wn/${iconElement}@2x.png"></img>
+       </div>                             <img class="forecast-icon" src="http://openweathermap.org/img/wn/${iconElement}@2x.png"></img>
                                     <p>${forecast.weather[0].description}</p>
                                     <p><strong>${Math.round(
                                       forecast.main.temp_max
@@ -73,6 +75,8 @@ function getCurrentLocationWeather(position) {
   let apiKey = "b34ef3b4fee7b2098cbfab18c5c5867d";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=${units}&appid=${apiKey}`;
   axios.get(apiUrl).then(displayCurrentLocationWeather);
+  apiUrl=`https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&units=${units}&appid=${apiKey}`;
+axios.get(apiUrl).then(showForecast);
 }
 function displayCurrentLocationWeather(response) {
   document.querySelector(
