@@ -85,12 +85,19 @@ function displayCurrentLocationWeather(response) {
   document.querySelector(".temp").innerHTML = Math.round(
     response.data.main.temp
   );
+   celciusTemperature=response.data.main.temp;
   document.querySelector(".description").innerHTML =
     response.data.weather[0].main;
     document.querySelector(".symbol").innerHTML=`°C`
 let weatherIconElement= document.querySelector("#weather-icon")
     weatherIconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
     weatherIconElement.setAttribute("alt", response.data.weather[0].main)
+     let humidity = document.querySelector(".humidity");
+  let windSpeed = document.querySelector(".wind-speed");
+  let maxTemp = document.querySelector(".max-temp");
+  humidity.innerHTML = response.data.main.humidity;
+  windSpeed.innerHTML = Math.round(response.data.wind.speed);
+  maxTemp.innerHTML = Math.round(response.data.main.temp_max);
   }
 
 function showCelcius(event) {
