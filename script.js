@@ -42,6 +42,19 @@ function findDefaultCity(city) {
   apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=${units}&appid=${apiKey}`;
   axios.get(apiUrl).then(showForecast);
 }
+function formatHours(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hour}`;
+  }
+  let minute = now.getMinutes();
+  if (minute < 10) {
+    minute = `0${minute}`;
+  }
+  return `${hours}:${minute}`;
+}
+
 function showForecast(response) {
   let forecast = null;
   let forecastElement = document.querySelector("#forecast-cols");
@@ -53,7 +66,7 @@ function showForecast(response) {
     
     <div class="col-3 text-center">
     <div class="forecast-time">
-    <p>time</p>
+    <p>${formatHours(forecast.dt*1000)}</p>
        </div>                             <img class="forecast-icon" src="http://openweathermap.org/img/wn/${iconElement}@2x.png"></img>
                                     <p>${forecast.weather[0].description}</p>
                                     <p><strong>${Math.round(
@@ -61,8 +74,10 @@ function showForecast(response) {
                                     )}</strong></p>
       <p>${Math.round(forecast.main.temp_min)}</p>
                                 </div>`;
+
+                            
+                                    }
   }
-}
 
 function getCurrentLocationUrl(position) {
   navigator.geolocation.getCurrentPosition(getCurrentLocationWeather);
@@ -160,6 +175,9 @@ if (minute < 10) {
 }
 let date = document.querySelector(".date");
 date.innerHTML = `${day} ${month} ${dates}  ${hour}:${minute}`;
+let timeElement= document.querySelector(".forecast-time"); 
+timeElement=null;   
+
 
 let searchCity = document.querySelector("#search-city");
 let searchCityInput = document.querySelector("#search-city-input");
