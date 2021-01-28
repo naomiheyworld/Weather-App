@@ -21,8 +21,8 @@ form {
     text-align: center;
 }
 .row{
-    margin-left: 15px;       
-    margin-right: -14px;
+    margin-left: 16px;       
+    margin-right: -19px;
 }
 .description{
     margin-bottom:0;
@@ -35,7 +35,7 @@ margin-left: -13px;
 margin-top: -39px;
 }
 
-.main{            width: 756px;
+.main{            width: 773px;
     height:600px;
     margin-left: -15px;
     background-image: url("clouds.jpeg");}
@@ -46,7 +46,7 @@ margin-top: -39px;
 margin-top: 34px;
 width: 726px;
                }
-               .forecast-header{margin-left:232px;
+               .forecast-header{margin-left:244px;
             margin-top:8px;    
         margin-bottom:-8px;}
                .forecast-time {   

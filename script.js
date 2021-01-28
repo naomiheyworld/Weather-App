@@ -27,10 +27,11 @@ function showNewCityWeather(response) {
     weatherIconElement.setAttribute("alt", response.data.weather[0].main)
     let humidity = document.querySelector(".humidity");
   let windSpeed = document.querySelector(".wind-speed");
-  let minTemp = document.querySelector(".min-temp");
+  let maxTemp = document.querySelector(".max-temp");
   humidity.innerHTML = response.data.main.humidity;
   windSpeed.innerHTML = Math.round(response.data.wind.speed);
-  minTemp.innerHTML = Math.round(response.data.main.temp_min);
+  maxTemp.innerHTML = Math.round(response.data.main.temp_max);
+
 }
 
 function findDefaultCity(city) {
@@ -42,7 +43,6 @@ function findDefaultCity(city) {
   axios.get(apiUrl).then(showForecast);
 }
 function showForecast(response) {
-  console.log(response.data.list);
   let forecast = null;
   let forecastElement = document.querySelector("#forecast-cols");
   forecastElement.innerHTML = null;
