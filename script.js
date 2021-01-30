@@ -46,9 +46,9 @@ function formatHours(timestamp) {
   let date = new Date(timestamp);
   let hours = date.getHours();
   if (hours < 10) {
-    hours = `0${hour}`;
+    hours = `0${hours}`;
   }
-  let minute = now.getMinutes();
+  let minute = date.getMinutes();
   if (minute < 10) {
     minute = `0${minute}`;
   }
